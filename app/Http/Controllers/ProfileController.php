@@ -9,9 +9,20 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use PhpParser\Node\Expr\Isset_;
+use App\Models\User;
+
 
 class ProfileController extends Controller
 {
+
+    /**
+     * Display all users profile info.
+     */
+    public function index(Request $request)
+    {
+        return User::all();
+    }
+
     /**
      * Display the user's profile form.
      */
